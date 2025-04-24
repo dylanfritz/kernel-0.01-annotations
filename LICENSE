@@ -1,0 +1,21 @@
+This kernel is (C) 1991 Linus Torvalds, but all or part of it may be
+redistributed provided you do the following:
+
+	- Full source must be available (and free), if not with the
+	  distribution then at least on asking for it.
+
+	- Copyright notices must be intact. (In fact, if you distribute
+	  only parts of it you may have to add copyrights, as there aren't
+	  (C)'s in all files.) Small partial excerpts may be copied
+	  without bothering with copyrights.
+
+	- You may not distibute this for a fee, not even "handling"
+	  costs.
+
+Mail me at "torvalds@kruuna.helsinki.fi" if you have any questions.
+
+Sadly, a kernel by itself gets you nowhere. To get a working system you
+need a shell, compilers, a library etc. These are separate parts and may
+be under a stricter (or even looser) copyright. Most of the tools used
+with linux are GNU software and are under the GNU copyleft. These tools
+aren't in the distribution - ask me (or GNU) for more info.
