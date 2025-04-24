@@ -1,0 +1,3 @@
+# What is this?
+
+This is a clone of the 0.01 linux kernel copied from [https://www.kernel.org/pub/linux/kernel/Historic]. This code is interspersed with my own annotations, as material for a paper I'm writing for an Operating Systems class I'm currently taking. The goal is to provide a code based overview of the 0.01 kernel as a jumping-off point for those wanting to learn kernel development. I've heard that reading the code of the 0.01 kernel is a good way to understand the structure of the linux kernel because it is much smaller than the kernel is today but the structure is still represented in part today.
