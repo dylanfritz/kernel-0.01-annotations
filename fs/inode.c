@@ -55,18 +55,18 @@ static int _bmap(struct m_inode * inode,int block,int create)
 		panic("_bmap: block<0");
 	if (block >= 7+512+512*512)
 		panic("_bmap: block>big");
-	if (block<7) {
+	if (block<7) { //this is the indirect block system for the filesystem at work, if the block number is less than 7, then the inode can be created directly
 		if (create && !inode->i_zone[block])
-			if (inode->i_zone[block]=new_block(inode->i_dev)) {
+			if (inode->i_zone[block]=new_block(inode->i_dev)) { // put the inode at the provided block number
 				inode->i_ctime=CURRENT_TIME;
 				inode->i_dirt=1;
 			}
 		return inode->i_zone[block];
 	}
 	block -= 7;
-	if (block<512) {
+	if (block<512) { //if the block number is > 7 but < 512 a single indirect is needed. 
 		if (create && !inode->i_zone[7])
-			if (inode->i_zone[7]=new_block(inode->i_dev)) {
+			if (inode->i_zone[7]=new_block(inode->i_dev)) { // put the inode in the first indirect, at its block position
 				inode->i_dirt=1;
 				inode->i_ctime=CURRENT_TIME;
 			}
