@@ -162,7 +162,7 @@ idt_descr:
 .align 2
 .word 0
 gdt_descr:
-	.word 256*8-1		# so does gdt (not that that's any
+	.word 256*8-1		# so does gdt [has 256 entries] (not that that's any
 	.long _gdt		# magic number, but it works for me :^)
 
 	.align 3
